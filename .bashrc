@@ -113,10 +113,15 @@ if ! shopt -oq posix; then
 fi
 
 # Android SDK
-export ANDROID_SDK=$HOME/android-sdk-linux
-export PATH=$PATH:$ANDROID_SDK/platform-tools:$ANDROID_SDK/tools:$ANDROID_SDK/build-tools/25.0.0/
+export ANDROID_HOME=$HOME/android-sdk-linux
+export PATH=$PATH:$ANDROID_HOME/platform-tools:$ANDROID_HOME/tools:$ANDROID_HOME/build-tools/25.0.0/
 
 # Set vim as VISUAL EDITOR
 export VISUAL=vim
 export EDITOR="$VISUAL"
+
+# Set GOROOT and GOPATH
+export GOROOT=$HOME/go
+export GOPATH=$HOME/gocode
+export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
 
